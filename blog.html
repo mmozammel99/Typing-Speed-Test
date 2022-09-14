@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="box-container">
+    <header class="divider-container container">
+        <div class="line"></div>
+        <h1 class="title2">BLOG</h1>
+        <div class="line"></div>
+    </header>
+    <main>
+        <div>
+            <!-- blog 1  -->
+            <div class="blog-card">
+                <h3>
+                    1) what is the difference between local storage and session storage ?
+                </h3>
+                <p>
+                    <br>
+                    ANS:-
+                    localStorage and sessionStorage are both ways for browsers to store key/value pairs for a particular
+                    domain using the Web Storage API.
+                    <br>
+                    In this article, we will take a look at the difference between localStorage and sessionStorage and
+                    learn how to use them.
+                    <br>
+                    “The Storage interface of the Web Storage API provides access to a particular domain's session or
+                    local storage. It allows, for example, the addition, modification, or deletion of stored data
+                    items.”
+                    <br>
+
+                    localStorage and sessionStorage are almost the same. Both have the following rules:
+                    <br>
+                    <br>
+                <ul>
+                    <li>They store key/value pairs for a particular domain.</li>
+                    <li>The values stored may only be strings.</li>
+                    <li>They have a limit of around 5MB of storage space.</li>
+                </ul>
+                <br>
+                The one major difference between localStorage and sessionStorage is the expiration date.
+                <br>
+                localStorage persists the storage across browser sessions. So even if the domain is opened in a new
+                tab, or the browser is closed and reopened, the storage is saved. There is no expiration.
+                <br>
+                sessionStorage is cleared when the page session ends. A page session lasts as long as the tab or the
+                browser is open. Therefore, when you open a new tab or a new window, this creates a new session and
+                new storage.
+                </p>
+            </div>
+            
+
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>
