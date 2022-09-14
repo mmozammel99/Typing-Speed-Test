@@ -10,6 +10,7 @@ let userText = "";
 let errorCount = 0;
 let startTime;
 let questionText = "";
+let speed = 0;
 
 // Load and display question
 fetch("./texts.json")
@@ -38,11 +39,13 @@ const typeController = (e) => {
     return;
   }
 
+
   userText += newLetter;
 
   const newLetterCorrect = validate(newLetter);
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
+    speed++;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
     errorCount ++;
@@ -68,6 +71,7 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = parseInt((finishTime - startTime) / 1000);
+  const wpm = (timeTaken /speed).toFixed(2);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -83,16 +87,18 @@ const gameOver = () => {
   <h1>Finished!</h1>
   <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
   <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+  <p>You made <span class="bold red">${wpm }</span> WPM</p>
   <button onclick="closeModal()">Close</button> 
   </div> 
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, timeTaken, errorCount ,wpm);
 
   // restart everything
   startTime = null;
   errorCount = 0;
   userText = "";
+  speed =0 ;
   display.classList.add("inactive");
 };
 
