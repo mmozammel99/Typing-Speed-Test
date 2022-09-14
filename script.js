@@ -87,7 +87,7 @@ const gameOver = () => {
   <h1>Finished!</h1>
   <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
   <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
-  <p>You made <span class="bold red">${wpm }</span> WPM</p>
+  <p>Your speed <span class="bold red">${wpm }</span> WPM</p>
   <button onclick="closeModal()">Close</button> 
   </div> 
   `;
@@ -113,7 +113,6 @@ const start = () => {
 
   let count = 3;
   countdownOverlay.style.display = "flex";
-
   const startCountdown = setInterval(() => {
     countdownOverlay.innerHTML = `<h1>${count}</h1>`;
 
@@ -123,7 +122,6 @@ const start = () => {
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
-
       clearInterval(startCountdown);
       startTime = new Date().getTime();
     }
@@ -141,7 +139,5 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = parseInt((currentTime - startTime) / 1000);
-
-
   document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);
