@@ -11,7 +11,7 @@ body {
   font-family: "Zilla Slab", serif;
 }
 
-ul {
+ul, ol{
 margin-left: 50px;
 }
 
@@ -28,6 +28,7 @@ margin-left: 50px;
   height: auto;
   color: white;
   font-size: 20px;
+  text-align: justify;
   border-radius: 15px;
   background: rgb(255, 255, 255);
   background: linear-gradient(
