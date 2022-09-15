@@ -11,7 +11,7 @@ function addHistory(questionText, timeTaken, errorCount, wpm) {
   <br/>
   <p>You made <span class="bold red">  ${errorCount}  </span> mistakes</p>
   <br/>
-  <p>Your speed <span class="bold red">${wpm}</span> WPM</p>
+  <p>Your speed <span class="bold green">${wpm}</span> WPM</p>
   </div>
   `;
 
@@ -39,7 +39,7 @@ console.log(test);
   <br/>
     <p>You made <span class="bold red">  ${test.errorCount} </span> mistakes</p>
     <br/>
-    <p>Your speed <span class="bold red">${test.wpm} </span>WPM</p>
+    <p>Your speed <span class="bold green">${test.wpm} </span>WPM</p>
   `;
 
     histories.appendChild(newRow);
