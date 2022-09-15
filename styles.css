@@ -130,7 +130,6 @@ ol {
 }
 .top {
   padding-left: 43%;
-  margin: 1% 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -252,5 +251,15 @@ ol {
   }
   #question {
     font-size: 15px;
+  }
+  .button2 {
+    padding: 7px 3px;
+    font-size: 12px;
+  }
+  .top {
+    padding-left: 28%;
+  }
+  #blog {
+    padding-left: 15%;
   }
 }
