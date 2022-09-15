@@ -45,10 +45,15 @@ const typeController = (e) => {
   const newLetterCorrect = validate(newLetter);
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
-    speed++;
+
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
-    errorCount ++;
+    errorCount++;
+  }
+  // typing speed [how mane space you press]
+
+  if (newLetter === " ") {
+    speed++;
   }
 
   // check if given question text is equal to user typed text
@@ -71,7 +76,9 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = parseInt((finishTime - startTime) / 1000);
-  const wpm = (timeTaken /speed).toFixed(2);
+  // Typing speed check in wpm
+  const timeTakenInMinutes = (timeTaken / 60);
+  const wpm = parseInt(speed / timeTakenInMinutes);
 
   // show result modal
   resultModal.innerHTML = "";
@@ -87,18 +94,18 @@ const gameOver = () => {
   <h1>Finished!</h1>
   <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
   <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
-  <p>Your speed <span class="bold green">${wpm }</span> WPM</p>
+  <p>Your speed <span class="bold green">${wpm}</span> WPM</p>
   <button onclick="closeModal()">Close</button> 
   </div> 
   `;
 
-  addHistory(questionText, timeTaken, errorCount ,wpm);
+  addHistory(questionText, timeTaken, errorCount, wpm);
 
   // restart everything
   startTime = null;
   errorCount = 0;
   userText = "";
-  speed =0 ;
+  speed = 0;
   display.classList.add("inactive");
 };
 
