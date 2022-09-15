@@ -11,8 +11,9 @@ body {
   font-family: "Zilla Slab", serif;
 }
 
-ul, ol{
-margin-left: 50px;
+ul,
+ol {
+  margin-left: 50px;
 }
 
 .box-container {
@@ -21,10 +22,10 @@ margin-left: 50px;
 }
 
 .result-box {
-  margin-left:40% ;
-  margin-top:20% ;
+  margin-left: 40%;
+  margin-top: 20%;
 }
-.blog-card{
+.blog-card {
   height: auto;
   color: white;
   font-size: 20px;
@@ -65,7 +66,7 @@ margin-left: 50px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding:1rem 2rem;
+  padding: 1rem 2rem;
   color: white;
   font-size: 25px;
   background-color: #171717;
@@ -127,6 +128,13 @@ margin-left: 50px;
   color: white;
   margin: 20px 0;
 }
+.top {
+  padding-left: 43%;
+  margin: 1% 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 .divider-container {
   height: 80px;
@@ -141,11 +149,13 @@ margin-left: 50px;
   height: 2px;
   background: white;
   width: 100%;
+  margin: 2% 0;
 }
 
 .title2 {
   color: white;
   display: block;
+  margin-left: 30px;
 }
 
 .buttons {
@@ -153,7 +163,7 @@ margin-left: 50px;
   justify-content: center;
   margin: 30px 0;
 }
-button {
+.button {
   padding: 10px 20px;
   border: none;
   font-size: 16px;
@@ -167,6 +177,23 @@ button {
   cursor: pointer;
 }
 
+.button2 {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 20px;
+  color: white;
+  background-color: #171717;
+  border-radius: 10px;
+  border: 2px solid #9dffad;
+}
+.button:hover,
+.button2:hover {
+  color: #171717;
+  background-color: #9dffad;
+  border-radius: 10px;
+  border: 2px solid white;
+}
 #histories {
   display: grid;
   gap: 50px;
@@ -223,6 +250,7 @@ button {
     justify-content: space-around;
     gap: 0;
   }
-  #question {font-size: 15px;
+  #question {
+    font-size: 15px;
   }
 }

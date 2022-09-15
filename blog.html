@@ -9,13 +9,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="box-container">
-    <header class="divider-container container">
-        <div class="line"></div>
-        <h1 class="title2">BLOG</h1>
-        <div class="line"></div>
+<body>
+
+    <header>
+        <div class="top">
+
+            <h1 class="title2">BLOG</h1>
+            <a href="index.html">
+                <button class="button2">Speed Monster</button>
+            </a>
+        </div>
+        <div class="box-container">
+            <div class="line "></div>
+        </div>
+
+
     </header>
-    <main>
+    <main class="box-container">
         <div>
             <!-- blog 1  -->
             <div class="blog-card">
@@ -127,27 +137,40 @@
                 </h3>
                 <p>
                     <br>
-                    ANS:- The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading. Let’s take a look at what happens on the back-end.
-<br>
-<br>
+                    ANS:- The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all
+                    operations on a single thread, but using a few smart data structures, it gives us the illusion of
+                    multi-threading. Let’s take a look at what happens on the back-end.
+                    <br>
+                    <br>
 
-                    The call stack is responsible for keeping track of all the operations in line to be executed. Whenever a function is finished, it is popped from the stack.
+                    The call stack is responsible for keeping track of all the operations in line to be executed.
+                    Whenever a function is finished, it is popped from the stack.
                     <br>
                     <br>
-                    
-                    The event queue is responsible for sending new functions to the stack for processing. It follows the queue data structure to maintain the correct sequence in which all operations should be sent for execution.
+
+                    The event queue is responsible for sending new functions to the stack for processing. It follows the
+                    queue data structure to maintain the correct sequence in which all operations should be sent for
+                    execution.
                     <br>
                     <br>
-                    Whenever an async function is called, it is sent to a browser API. These are APIs built into the browser. Based on the command received from the call stack, the API starts its own single-threaded operation.
+                    Whenever an async function is called, it is sent to a browser API. These are APIs built into the
+                    browser. Based on the command received from the call stack, the API starts its own single-threaded
+                    operation.
                     <br>
                     <br>
-                    An example of this is the setTimeout method. When a setTimeout operation is processed in the stack, it is sent to the corresponding API which waits till the specified time to send this operation back in for processing.
+                    An example of this is the setTimeout method. When a setTimeout operation is processed in the stack,
+                    it is sent to the corresponding API which waits till the specified time to send this operation back
+                    in for processing.
                     <br>
                     <br>
-                    Where does it send the operation? The event queue. Hence, we have a cyclic system for running async operations in JavaScript. The language itself is single-threaded, but the browser APIs act as separate threads.
+                    Where does it send the operation? The event queue. Hence, we have a cyclic system for running async
+                    operations in JavaScript. The language itself is single-threaded, but the browser APIs act as
+                    separate threads.
                     <br>
                     <br>
-                    The event loop facilitates this process; it constantly checks whether or not the call stack is empty. If it is empty, new functions are added from the event queue. If it is not, then the current function call is processed.
+                    The event loop facilitates this process; it constantly checks whether or not the call stack is
+                    empty. If it is empty, new functions are added from the event queue. If it is not, then the current
+                    function call is processed.
                     <br>
                     <br>
                     For Details :
