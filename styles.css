@@ -154,7 +154,6 @@ ol {
 .title2 {
   color: white;
   display: block;
-  margin-left: 30px;
 }
 
 .buttons {
@@ -192,6 +191,9 @@ ol {
   background-color: #9dffad;
   border-radius: 10px;
   border: 2px solid white;
+}
+#blog {
+  padding-left: 7%;
 }
 #histories {
   display: grid;
